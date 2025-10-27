@@ -7,15 +7,23 @@
 
 :root {
     --text-color: black;
+    --light-color: #343535;
+    --lightExtra-color: #525555dc;
+    --lightStrong-color: #52555527;
+    --lightHover-color: rgba(128, 128, 128, 0.122);
+    --background-color: #E2E5E6;
     --Box--shaodow: rgba(0, 0, 0, 0.1)
 }
 
 body {
-    background-color: #E2E5E6;
+    background-color: var(--background-color);
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
 }
 
+body::-webkit-scrollbar{
+    display: none;
+}
 
 
 
@@ -23,7 +31,7 @@ body {
     height: 8px;
     width: 8px;
     background-color: black;
-    z-index: 9;
+    z-index: 1000;
 
 
 }
@@ -31,7 +39,7 @@ body {
 .curosr-outline {
     height: 40px;
     width: 40px;
-    z-index: 8;
+    z-index: 1000;
 
 }
 
@@ -59,8 +67,8 @@ header {
     align-items: center;
     padding: 10px 20px;
     gap: 10px;
-    ;
-    z-index: 7;
+
+    z-index: 1;
 
 }
 
@@ -74,28 +82,19 @@ header {
 
 
 .alp {
-    color: #353333;
-    font-family: cursive, 'Poppins', sans-serif;
-  
+    color: var(--text-color);
+    font-size: clamp(0.4rem, 30px, 40px);
+
 }
 
 
-/* @keyframes typing {
-    from { width: 0ch; }
-    to { width: 5ch; } 
-}
-
-
-@keyframes blink-cursor {
-    from, to { border-color: transparent; }
-    50% { border-color: #353333; }
-} */
 
 .nav-right a {
     position: relative;
     padding: 0 10px;
     text-decoration: none;
-    color: black;
+    color: var(--text-color);
+
 }
 
 .nav-right a::after {
@@ -105,7 +104,7 @@ header {
     left: 50%;
     width: 90%;
     height: 2px;
-    background-color: black;
+    background-color: var(--text-color);
     transform: translateX(-50%) scaleX(0);
     transform-origin: center;
     transition: transform 0.3s ease;
@@ -133,41 +132,118 @@ a {
 
 
 
-.dropbar {
+.sidebar {
     position: absolute;
-    top: 65px;
+    top: 0;
     left: 0;
 
-    width: 100%;
+    width: 300px;
+    height: 100vh;
 
     display: flex;
-    justify-content: center;
     transform: translateX(-150%);
+    flex-direction: column;
+    padding: 0 20px;
+
     transition: all 0.4s linear;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--background-color);
+
+    z-index: 9;
+
+}
 
 
-    z-index: 5;
+.user_details {
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+}
 
+.user_details p {
+    text-align: center;
+    font-size: 13px;
+    color: var(--lightExtra-color);
+}
+
+.user_details h5 {
+    color: var(--text-color);
+}
+
+.user_info::after {
+    content: "hello";
+    position: relative;
+    top: 0;
+    right: 0;
+
+}
+
+.user_details img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
 }
 
 .sidebar_Content {
     display: flex;
+    justify-content: left;
 
     flex-direction: column;
-    margin: auto;
     gap: 8px;
-    padding: 10px 0;
+    padding: 10px 0 0 0;
+    margin-top: 25px;
+    height: inherit;
+
 
 }
 
 .sidebar_Content a {
     font-size: 18px;
     font-weight: 400;
+    padding: 4px 10px;
+    border-radius: 3px;
+    color: var(--light-color);
+}
+
+.sidebar_Content a:hover {
+    background-color: var(--lightHover-color);
+    color: var(--text-color);
+
+
 }
 
 
+.tech_stacks {
+    color: var(--text-color);
+    font-size: 13px;
+    border-top: 1px solid var(--lightStrong-color);
+    padding-top: 15px;
+    margin-bottom: 30px;
 
+}
+
+
+.stacks{
+    padding-top: 5px;
+}
+.stacks li {
+    display: inline-block;
+    padding: 3px 5px;
+    margin: 2px;
+    list-style: none;
+    border-radius: 5px;
+    background-color: var(--lightStrong-color);
+}
+
+@keyframes moveAlong {
+    0% {
+        offset-distance: 0%;
+    }
+
+    100% {
+        offset-distance: 100%;
+    }
+}
 
 
 
@@ -193,7 +269,7 @@ a {
 
     }
 
-    .dropbar.show {
+    .sidebar.show {
         transform: translateX(0);
     }
 

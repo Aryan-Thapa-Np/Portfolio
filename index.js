@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     const toggle_Sidebar = document.querySelector('.toggle-hamburger');
-    const sidebar = document.querySelector('.dropbar');
+    const sidebar = document.querySelector('.sidebar');
 
     let toggleCheck = true;
     toggle_Sidebar.addEventListener("click", () => {
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     window.addEventListener("mousemove", (e) => {
-       
+
 
         customCursorDot.style.top = `${e.clientY}px`;
         customCursorDot.style.left = `${e.clientX}px`;
@@ -63,6 +63,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     });
+
+
 
 
 });
