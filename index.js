@@ -64,7 +64,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
+    const texts = [
+        "Full Stack Developer",
+        "Software Developer",
+        "Frontend Developer",
+        "Backend Developer"
+    ];
 
+    const element = document.querySelectorAll(".user_info");
+    let index = 0;
+    let charIndex = 0;
+    let typingSpeed = 100;
+    let pauseTime = 1500;
+
+    function type() {
+        const currentText = texts[index];
+        element.forEach(item => {
+            item.textContent = currentText.slice(0, charIndex);
+
+         
+        })
+           if (charIndex < currentText.length) {
+                charIndex++;
+                setTimeout(type, typingSpeed);
+            } else {
+                setTimeout(() => {
+                    charIndex = 0;
+                    index = (index + 1) % texts.length;
+                    type();
+                }, pauseTime);
+            }
+    }
+
+    type();
 
 
 });

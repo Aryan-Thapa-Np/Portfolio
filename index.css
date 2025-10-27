@@ -3,10 +3,15 @@
     padding: 0;
     box-sizing: border-box;
     cursor: none;
+    font-family: 'Poppins', sans-serif;
+
 }
 
 :root {
     --text-color: black;
+    --button-black-color: rgba(0, 0, 0, 0.846);
+    --button-black-hover-color: rgba(0, 0, 0, 0.946);
+
     --light-color: #343535;
     --lightExtra-color: #525555dc;
     --lightStrong-color: #52555527;
@@ -17,11 +22,10 @@
 
 body {
     background-color: var(--background-color);
-    font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
 }
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
     display: none;
 }
 
@@ -83,7 +87,10 @@ header {
 
 .alp {
     color: var(--text-color);
-    font-size: clamp(0.4rem, 30px, 40px);
+
+    font-size: clamp(1.5rem, 2.5vw + 1rem, 2.2rem);
+
+
 
 }
 
@@ -145,7 +152,7 @@ a {
     flex-direction: column;
     padding: 0 20px;
 
-    transition: all 0.4s linear;
+    transition: all 0.4s ease;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
     background-color: var(--background-color);
 
@@ -168,14 +175,6 @@ a {
 
 .user_details h5 {
     color: var(--text-color);
-}
-
-.user_info::after {
-    content: "hello";
-    position: relative;
-    top: 0;
-    right: 0;
-
 }
 
 .user_details img {
@@ -223,9 +222,10 @@ a {
 }
 
 
-.stacks{
+.stacks {
     padding-top: 5px;
 }
+
 .stacks li {
     display: inline-block;
     padding: 3px 5px;
@@ -235,17 +235,157 @@ a {
     background-color: var(--lightStrong-color);
 }
 
-@keyframes moveAlong {
-    0% {
-        offset-distance: 0%;
+/* ----------------------------UNIVERSAL SECTION----------------------- */
+
+
+.user_info {
+    font-family: monospace;
+    white-space: nowrap;
+    display: inline-flex;
+
+    overflow: hidden;
+    border-right: 1px solid var(--text-color);
+    animation: blink 0.7s step-end infinite;
+
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        border-color: transparent;
     }
 
-    100% {
-        offset-distance: 100%;
+    50% {
+        border-color: var(--text-color);
     }
 }
 
 
+
+
+section {
+    height: 100vh;
+    width: 100vw;
+}
+
+/* ---------------------------------------HERO SECTION----------------------------- */
+
+#Hero_Section {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+
+}
+
+.Hero_Details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.Hero_Details img {
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+}
+
+#user_info_hero {
+    margin-top: 5px;
+    font-size: clamp(1rem, 1vw + 0.4rem, 1.1rem);
+    height: 20px;
+    color: var(--text-color);
+    color: var(--light-color);
+
+}
+
+.Hero_Details span {
+    font-size: clamp(1rem, 1vw + 0.4rem, 1.1rem);
+    height: 20px;
+    font-family: monospace;
+    color: var(--light-color);
+
+
+}
+
+.profile_pic {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile_pic span {
+    font-family: monospace;
+    font-weight: 700;
+
+}
+
+.profile_pic p {
+    font-family: monospace;
+    color: var(--light-color);
+    margin-top: 15px;
+    font-size: clamp(0.8rem, 1vw + 0.1rem, 1.1rem);
+}
+
+
+.user_info_details {
+    color: var(--lightExtra-color);
+    margin-top: 19px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+
+.button_group {
+    display: flex;
+    gap: 10px;
+}
+
+.button_group button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border: 1px solid var(--lightStrong-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(0.8rem, 1vw + 0.1rem, 1.4rem);
+
+}
+
+.button_group .view_work {
+    background-color: var(--button-black-color);
+    color: white;
+}
+
+.button_group .view_work:hover {
+    background-color: transparent;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+
+}
+
+.button_group .Contact_me {
+    color: var(--text-color);
+    font-weight: 500;
+
+}
+
+.button_group .Contact_me:hover {
+    background-color: var(--background-color);
+    transition: all 0.3s ease;
+
+}
+
+.social_Medials a {
+    padding: 0 1px;
+    color: var(--text-color);
+    font-size: clamp(1rem, 1vw + 2rem, 1.4rem);
+
+}
 
 
 
@@ -262,6 +402,11 @@ a {
     .toggle-hamburger {
         display: flex;
 
+    }
+
+    .Hero_Details img {
+        height: 180px;
+        width: 180px;
     }
 
     .toggle-hamburger i {
