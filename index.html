@@ -23,8 +23,8 @@
 
         <div class="nav-right">
             <a href="">Home</a>
-            <a href="">Skills</a>
-            <a href="">Projects</a>
+            <a href="#projects">Skills</a>
+            <a href="#projects">Projects</a>
             <a href="">Contact</a>
         </div>
         <p class="toggle-hamburger"><i class="fa-solid fa-bars"></i></p>
@@ -87,16 +87,21 @@
         </div>
     </div>
 
+
+
     <section id="Hero_Section">
+
+
+
         <div class="Hero_Details">
             <div class="profile_pic">
                 <img src="user.jpeg" alt="profile_pic">
 
                 <p>Hi, I'm <span>Aryan Thapa</span></p>
 
-
             </div>
-            <span> I am a <p id="user_info_hero" class="user_info"></p></span>
+            <span> I am a </span>
+            <p id="user_info_hero" class="user_info"></p>
 
 
             <p class="user_info_details">
@@ -106,8 +111,13 @@
             </p>
 
             <div class="button_group">
-                <button class="view_work">View My Work <i class="fa-solid fa-arrow-right"></i></button>
-                <button class="Contact_me">Contact Me</button>
+                <button class="view_work">
+                    <a href="#projects">
+                        <span class="top">View My Work <i class="fa-solid fa-arrow-down"></i></span>
+                        <span class="bottom">Get Started <i class="fa-solid fa-exclamation"></i></span>
+                    </a>
+                </button>
+                <button class="Contact_me"><a href="">Contact Me</a></button>
 
             </div>
 
@@ -124,8 +134,153 @@
 
     </section>
 
+    <section id="techstack">
+        <div class="tech-container">
+            <h2>My Tech Stack & Tools</h2>
+            <p>Here are the technologies I use to build powerful and efficient applications.</p>
+
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <i class="fa-brands fa-html5"></i> HTML5
+                    <span class="level advanced">Advanced</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fa-brands fa-css3-alt"></i> CSS3
+                    <span class="level intermediate">Intermediate</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fa-brands fa-css3-alt"></i> Tailwind
+                    <span class="level intermediate">Intermediate</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fa-brands fa-java"></i> Java
+                    <span class="level beginner">Beginner</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fa-brands fa-python"></i> Python
+                    <span class="level beginner">Beginner</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fa-brands fa-js"></i> JavaScript
+                    <span class="level intermediate">Intermediate</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fa-solid fa-code"></i> TypeScript
+                    <span class="level beginner">Beginner</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fa-brands fa-react"></i> React
+                    <span class="level intermediate">Intermediate</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fa-brands fa-node-js"></i> Node.js
+                    <span class="level intermediate">Intermediate</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fa-solid fa-database"></i> MongoDB
+                    <span class="level intermediate">Intermediate</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fa-brands fa-aws"></i> Mysql
+                    <span class="level beginner">Beginner</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fa-brands fa-aws"></i> Redis
+                    <span class="level beginner">Beginner</span>
+                </div>
+
+                <div class="tech-item">
+                    <i class="fa-brands fa-git-alt"></i> Git
+                    <span class="level beginner">Beginner</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fa-brands fa-git-alt"></i> Git Hub
+                    <span class="level intermediate">Intermediate</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fa-brands fa-docker"></i> Docker
+                    <span class="level beginner">Beginner</span>
+                </div>
 
 
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="projects-container">
+            <h2>My Projects</h2>
+            <p>Here are some of the projects I’ve worked on. Click on them to see live demos or the source code.</p>
+
+            <div class="projects-grid">
+
+                <div class="project-item">
+                    <img src="user.jpeg" alt="Project 1 Screenshot">
+                    <div class="project-info">
+                        <h3>Portfolio Website</h3>
+                        <p>A personal portfolio website showcasing my skills, projects, and contact information.</p>
+                        <p class="tech">Tech: HTML, CSS, JavaScript, React</p>
+                        <div class="project-links button_group">
+                            <button class="github">
+                                <a href="https://github.com/yourusername/task-manager" target="_blank"><i
+                                        class="fa-brands fa-github"></i> GitHub</a>
+
+                            </button>
+                            <button class="livedemo">
+
+                                <a href="https://taskmanager.com" target="_blank">Live Demo <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-item">
+                    <img src="user.jpeg" alt="Project 2 Screenshot">
+                    <div class="project-info">
+                        <h3>Project Tracker</h3>
+                        <p>A web app to manage daily tasks with CRUD operations and user authentication.</p>
+                        <p class="tech">Tech: Node.js, Express, MongoDB, React</p>
+                        <div class="project-links button_group">
+                            <button class="github">
+                                <a href="https://github.com/yourusername/task-manager" target="_blank"><i
+                                        class="fa-brands fa-github"></i> GitHub</a>
+
+                            </button>
+                            <button class="livedemo">
+
+                                <a href="https://taskmanager.com" target="_blank">Live Demo <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <img src="user.jpeg" alt="Project 2 Screenshot">
+                    <div class="project-info">
+                        <h3>Task Manager App</h3>
+                        <p>A web app to manage daily tasks with CRUD operations and user authentication.</p>
+                        <p class="tech">Tech: Node.js, Express, MongoDB, React</p>
+                        <div class="project-links button_group">
+                            <button class="github">
+                                <a href="https://github.com/yourusername/task-manager" target="_blank"><i
+                                        class="fa-brands fa-github"></i> GitHub</a>
+
+                            </button>
+                            <button class="livedemo">
+
+                                <a href="https://taskmanager.com" target="_blank">Live Demo <i
+                                        class="fa-solid fa-arrow-right"></i></a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more project items here -->
+
+            </div>
+        </div>
+    </section>
 
 
     <script src="index.js"></script>

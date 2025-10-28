@@ -29,9 +29,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener("mousemove", (e) => {
 
+        const x = e.pageX;
+        const y = e.pageY;
 
-        customCursorDot.style.top = `${e.clientY}px`;
-        customCursorDot.style.left = `${e.clientX}px`;
+        customCursorDot.style.top = `${y}px`;
+        customCursorDot.style.left = `${x}px`;
 
 
 
@@ -41,15 +43,15 @@ document.addEventListener("DOMContentLoaded", () => {
         function updateMouseLocation() {
 
 
-
+      
 
             customCursorOutline.animate(
                 {
-                    top: `${e.clientY}px`,
-                    left: `${e.clientX}px`
+                    top: `${y}px`,
+                    left: `${x}px`
                 },
                 {
-                    duration: 50,
+                    duration: 100,
                     fill: "forwards"
 
                 }
@@ -82,18 +84,18 @@ document.addEventListener("DOMContentLoaded", () => {
         element.forEach(item => {
             item.textContent = currentText.slice(0, charIndex);
 
-         
+
         })
-           if (charIndex < currentText.length) {
-                charIndex++;
-                setTimeout(type, typingSpeed);
-            } else {
-                setTimeout(() => {
-                    charIndex = 0;
-                    index = (index + 1) % texts.length;
-                    type();
-                }, pauseTime);
-            }
+        if (charIndex < currentText.length) {
+            charIndex++;
+            setTimeout(type, typingSpeed);
+        } else {
+            setTimeout(() => {
+                charIndex = 0;
+                index = (index + 1) % texts.length;
+                type();
+            }, pauseTime);
+        }
     }
 
     type();
