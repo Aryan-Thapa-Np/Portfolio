@@ -1,0 +1,319 @@
+@import "@fontsource/space-grotesk/400.css";
+@import "@fontsource/space-grotesk/500.css";
+@import "@fontsource/space-grotesk/700.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  color: #f9f9f9;
+  background-color: #101922;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.btn {
+  @apply overflow-hidden cursor-pointer  rounded-md px-4 py-2 
+         transition-all duration-300;
+}
+
+.btn:hover {
+  background: linear-gradient(0%, #137fec, #137fec);
+  box-shadow:
+    0 0 15px #137fec,
+    0 0 30px #137fec;
+}
+
+.btn_dark {
+  @apply overflow-hidden cursor-pointer  rounded-md px-4 py-2 
+         transition-all duration-300;
+}
+
+.btn_dark:hover {
+  background: linear-gradient(
+    0%,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.05)
+  );
+  box-shadow:
+    0 0 15px rgba(255, 255, 255, 0.05),
+    0 0 30px rgba(255, 255, 255, 0.05);
+}
+
+.hero_section {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.hero_section::before,
+.hero_section::after,
+.hero_blob {
+  content: "";
+  position: absolute;
+  width: clamp(200px, 30vw, 400px);
+  height: clamp(200px, 30vw, 400px);
+  background: radial-gradient(circle, #1e90ff 0%, #0e74db 40%, #0050a8 100%);
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.5;
+  z-index: 1;
+  will-change: transform, opacity;
+  animation: floatSmooth 12s ease-in-out infinite;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Extra glow layer */
+.hero_section::before {
+  top: 70px;
+  left: 50px;
+}
+
+.hero_section::after {
+  bottom: -250px;
+  right: 50%;
+  animation-delay: 8s;
+}
+
+.hero_blob {
+  top: 30vh;
+  right: 50px;
+  animation-delay: 4s;
+  background: radial-gradient(circle, #433bce 0%, #4f46e5 40%, #4a41f0 100%);
+}
+
+/* Smooth floating animation */
+@keyframes floatSmooth {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px) scale(1) rotate(0deg);
+    opacity: 0.5;
+  }
+  25% {
+    transform: translateY(-90px) translateX(10px) scale(1.05) rotate(3deg);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translateY(-40px) translateX(-10px) scale(1.1) rotate(-2deg);
+    opacity: 0.4;
+  }
+  75% {
+    transform: translateY(-35px) translateX(15px) scale(1.05) rotate(2deg);
+    opacity: 0.5;
+  }
+}
+
+/* Tablet devices */
+@media (max-width: 1024px) {
+  .hero_section::before,
+  .hero_section::after,
+  .hero_blob {
+    width: clamp(180px, 35vw, 350px);
+    height: clamp(180px, 35vw, 350px);
+    filter: blur(80px);
+  }
+
+  .hero_section::before {
+    top: 20px;
+    left: -30px;
+  }
+
+  .hero_section::after {
+    bottom: -200px;
+    right: 45%;
+  }
+
+  .hero_blob {
+    top: 35vh;
+    right: 30px;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .hero_section::before,
+  .hero_section::after,
+  .hero_blob {
+    width: clamp(150px, 40vw, 280px);
+    height: clamp(150px, 40vw, 280px);
+    filter: blur(60px);
+    opacity: 0.4;
+  }
+
+  .hero_section::before {
+    top: 50px;
+    left: -20px;
+  }
+
+  .hero_section::after {
+    top: auto;
+    bottom: 100px;
+    right: -80px;
+  }
+
+  .hero_blob {
+    top: auto;
+    bottom: -50px;
+    left: 20px;
+    right: auto;
+  }
+
+  @keyframes floatSmooth {
+    0%,
+    100% {
+      transform: translateY(0px) translateX(0px) scale(1) rotate(0deg);
+      opacity: 0.4;
+    }
+    25% {
+      transform: translateY(-60px) translateX(8px) scale(1.03) rotate(2deg);
+      opacity: 0.3;
+    }
+    50% {
+      transform: translateY(-30px) translateX(-8px) scale(1.05) rotate(-2deg);
+      opacity: 0.35;
+    }
+    75% {
+      transform: translateY(-25px) translateX(12px) scale(1.03) rotate(1deg);
+      opacity: 0.3;
+    }
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .hero_section::before,
+  .hero_section::after,
+  .hero_blob {
+    width: clamp(120px, 45vw, 220px);
+    height: clamp(120px, 45vw, 220px);
+    filter: blur(50px);
+    opacity: 0.35;
+  }
+
+  .hero_section::before {
+    top: 80px;
+    left: -40px;
+  }
+
+  .hero_section::after {
+    bottom: 150px;
+    right: -60px;
+  }
+
+  .hero_blob {
+    bottom: -30px;
+    left: 10px;
+  }
+
+  @keyframes floatSmooth {
+    0%,
+    100% {
+      transform: translateY(0px) translateX(0px) scale(1) rotate(0deg);
+      opacity: 0.35;
+    }
+    25% {
+      transform: translateY(-40px) translateX(5px) scale(1.02) rotate(1deg);
+      opacity: 0.25;
+    }
+    50% {
+      transform: translateY(-20px) translateX(-5px) scale(1.03) rotate(-1deg);
+      opacity: 0.3;
+    }
+    75% {
+      transform: translateY(-15px) translateX(8px) scale(1.02) rotate(1deg);
+      opacity: 0.25;
+    }
+  }
+}
+
+.glow_eff:before {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background: radial-gradient(circle, #433bce 0%, #4f46e5 40%, #4a41f0 100%);
+  z-index: -1;
+  filter: blur(60px);
+  opacity: 0.4;
+}
+
+/* Floating Icons Container */
+.floating-icon {
+  position: absolute;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Tech Badge Styling */
+.tech-badge {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: 80px;
+  width: 80px;
+}
+
+.tech-badge:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--primary, #6366f1);
+}
+
+.tech-badge span:last-child {
+  color: rgba(255, 255, 255, 0.9);
+  white-space: nowrap;
+}
+
+/* Position each icon around the circle */
+.floating-icon-1 {
+  top: -10%;
+  left: -5%;
+  transform: translateX(-50%);
+  animation-delay: 0s;
+}
+
+.floating-icon-2 {
+  top: -10%;
+  right: -5%;
+  animation-delay: 0.5s;
+}
+
+.floating-icon-3 {
+  top: 85%;
+  right: 85%;
+  animation-delay: 1s;
+}
+
+.floating-icon-4 {
+  bottom: -10%;
+  right: -5%;
+  animation-delay: 1.5s;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
