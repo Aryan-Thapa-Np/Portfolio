@@ -4,11 +4,11 @@ import StackIcon from "tech-stack-icons";
 
 export default function Hero_section() {
   return (
-    <section className="hero_section relative flex flex-col-reverse md:flex-row justify-between items-center gap-8 md:gap-12 px-4 sm:px-8 md:px-12 lg:px-20 pt-32 md:pt-16 lg:pt-20">
+    <section className="hero_section flex flex-col-reverse md:flex-row justify-between items-center gap-8 md:gap-12 px-4 sm:px-8 md:px-12 lg:px-20 pt-32 md:pt-16 lg:pt-20 pb-16 md:pb-20">
       <div className="hero_blob"></div>
 
       {/* Left Content */}
-      <div className="left w-full md:w-[65%] lg:w-[70%]">
+      <div className="left w-full md:w-[65%] lg:w-[70%] hero-content-animate relative z-10">
         <div className="space-y-6 md:space-y-8">
           {/* Heading */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl  font-bold leading-tight">
@@ -53,7 +53,7 @@ export default function Hero_section() {
       </div>
 
       {/* Right Image */}
-      <div className="right z-10 w-full md:w-auto flex justify-center md:justify-end">
+      <div className="right relative z-10 w-full md:w-auto flex justify-center md:justify-end hero-image-animate">
         <div className="relative h-64 w-64 lg:h-72 lg:w-72 xl:h-80 xl:w-80">
           {/* Main glow container */}
           <div className="h-full w-full glow_eff bg-dark/50 flex items-center justify-center rounded-lg md:mr-8 lg:mr-12 xl:mr-20">

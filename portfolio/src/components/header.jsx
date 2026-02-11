@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 z-20 flex justify-between items-center py-3 px-10 md:px-20   ">
+      <div className="header-animate fixed top-0 left-0 right-0 z-50 flex justify-between items-center py-3 px-10 md:px-20 bg-dark/80 backdrop-blur-md border-b border-white/5">
         <div>
           <h1 className="text-2xl md:text-3xl font-bold font-space hover:scale-105 transition-all duration-300">
             Portfolio.

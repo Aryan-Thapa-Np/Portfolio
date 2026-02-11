@@ -50,9 +50,10 @@ body::-webkit-scrollbar {
 }
 
 .hero_section {
-  position: absolute;
-  height: 100%;
+  position: relative;
+  min-height: 100vh;
   width: 100%;
+  overflow: hidden;
 }
 
 .hero_section::before,
@@ -307,6 +308,34 @@ body::-webkit-scrollbar {
   animation-delay: 1.5s;
 }
 
+/* Section Backgrounds */
+.projects-section {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(147, 51, 234, 0.03) 50%,
+    transparent 100%
+  );
+}
+
+.tech-stack-section {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(19, 127, 236, 0.03) 50%,
+    transparent 100%
+  );
+}
+
+.experience-section {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(67, 59, 206, 0.03) 50%,
+    transparent 100%
+  );
+}
+
 /* Floating Animation */
 @keyframes float {
   0%,
@@ -315,5 +344,303 @@ body::-webkit-scrollbar {
   }
   50% {
     transform: translateY(-15px);
+  }
+}
+
+/* ===== SCROLL-BASED ANIMATIONS ===== */
+
+/* Header Animation */
+.header-animate {
+  animation: slideDown 0.8s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Hero Section Animations */
+.hero-content-animate {
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.hero-image-animate {
+  animation: fadeInScale 1s ease-out 0.6s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Tech Stack, Experience & Projects Scroll Animations */
+.tech-item,
+.experience-item,
+.project-item {
+  opacity: 0;
+  transform: translateY(50px);
+  transition:
+    opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tech-item.animate-in,
+.experience-item.animate-in,
+.project-item.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Tech Card Hover Effect */
+.tech-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-card::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(19, 127, 236, 0.3), transparent);
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.6s ease,
+    height 0.6s ease;
+}
+
+.tech-card:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Experience Card Animation */
+.experience-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.experience-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(19, 127, 236, 0.1),
+    transparent
+  );
+  transition: left 0.8s ease;
+}
+
+.experience-card:hover::after {
+  left: 100%;
+}
+
+/* Project Card Hover Effect */
+.project-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(147, 51, 234, 0.15),
+    transparent
+  );
+  transition: left 0.8s ease;
+  z-index: 1;
+}
+
+.project-card:hover::before {
+  left: 100%;
+}
+
+/* Line clamp utility */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Sidebar Animations */
+.sidebar-item {
+  animation: slideInRight 0.4s ease-out both;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Footer Animation */
+.footer-animate {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Smooth Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Stagger Animation for Grid Items - Applied when animate-in class is added */
+.tech-item.animate-in:nth-child(1) {
+  transition-delay: 0s;
+}
+.tech-item.animate-in:nth-child(2) {
+  transition-delay: 0.05s;
+}
+.tech-item.animate-in:nth-child(3) {
+  transition-delay: 0.1s;
+}
+.tech-item.animate-in:nth-child(4) {
+  transition-delay: 0.15s;
+}
+.tech-item.animate-in:nth-child(5) {
+  transition-delay: 0.2s;
+}
+.tech-item.animate-in:nth-child(6) {
+  transition-delay: 0.25s;
+}
+.tech-item.animate-in:nth-child(7) {
+  transition-delay: 0.3s;
+}
+.tech-item.animate-in:nth-child(8) {
+  transition-delay: 0.35s;
+}
+.tech-item.animate-in:nth-child(9) {
+  transition-delay: 0.4s;
+}
+.tech-item.animate-in:nth-child(10) {
+  transition-delay: 0.45s;
+}
+.tech-item.animate-in:nth-child(11) {
+  transition-delay: 0.5s;
+}
+.tech-item.animate-in:nth-child(12) {
+  transition-delay: 0.55s;
+}
+.tech-item.animate-in:nth-child(13) {
+  transition-delay: 0.6s;
+}
+
+/* Stagger for Experience Items */
+.experience-item.animate-in:nth-child(1) {
+  transition-delay: 0s;
+}
+.experience-item.animate-in:nth-child(2) {
+  transition-delay: 0.15s;
+}
+.experience-item.animate-in:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.experience-item.animate-in:nth-child(4) {
+  transition-delay: 0.45s;
+}
+.experience-item.animate-in:nth-child(5) {
+  transition-delay: 0.6s;
+}
+
+/* Stagger for Project Items */
+.project-item.animate-in:nth-child(1) {
+  transition-delay: 0s;
+}
+.project-item.animate-in:nth-child(2) {
+  transition-delay: 0.1s;
+}
+.project-item.animate-in:nth-child(3) {
+  transition-delay: 0.2s;
+}
+.project-item.animate-in:nth-child(4) {
+  transition-delay: 0.3s;
+}
+.project-item.animate-in:nth-child(5) {
+  transition-delay: 0.4s;
+}
+.project-item.animate-in:nth-child(6) {
+  transition-delay: 0.5s;
+}
+.project-item.animate-in:nth-child(7) {
+  transition-delay: 0.6s;
+}
+.project-item.animate-in:nth-child(8) {
+  transition-delay: 0.7s;
+}
+
+/* Parallax Effect for Background Blobs */
+@media (prefers-reduced-motion: no-preference) {
+  .hero_section::before,
+  .hero_section::after,
+  .hero_blob {
+    will-change: transform;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
   }
 }
