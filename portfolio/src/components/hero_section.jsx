@@ -22,8 +22,11 @@ export default function Hero_section() {
           </h1>
 
           <p className="text-secondary text-sm sm:text-base md:text-lg lg:text-xl font-space leading-relaxed w-full sm:w-[85%] md:w-[75%] lg:w-[65%] xl:w-[50%]">
-            I build web applications that work smoothly and look great.
-            Experienced with{" "}
+            <span className="underline underline-offset-4 text-white decoration-primary/50">
+              Hi! I'm Aryan Thapa
+            </span>
+            , a Full-Stack Developer & System Designer. I build web applications
+            that work smoothly and look great. Experienced with{" "}
             <span className="underline underline-offset-4 text-white decoration-primary/50">
               React
             </span>
