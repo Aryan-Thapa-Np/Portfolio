@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 export default function Header() {
   return (
     <>
@@ -10,24 +8,24 @@ export default function Header() {
           </h1>
         </div>
         <div className="mid hidden gap-10 items-center justify-center font-space text-secondary md:flex">
-          <Link to="/projects" className="hover:text-primary">
+          <a href="#project_section" className="hover:text-primary">
             Projects
-          </Link>
-          <Link to="/stacks" className="hover:text-primary">
+          </a>
+          <a href="#tech_stack_section" className="hover:text-primary">
             Stacks
-          </Link>
-          <Link to="/experience" className="hover:text-primary">
+          </a>
+          <a href="#experience_section" className="hover:text-primary">
             Experience
-          </Link>
+          </a>
         </div>
 
         <div className="right md:flex hidden ">
-          <Link
-            to="/contact"
-            className="btn font-semibold bg-primary text-white  font-space "
+          <a
+            href="#contact_section"
+            className="btn font-semibold flex items-center justify-center gap-2 btn_dark bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 transition-colors "
           >
             Hire Me
-          </Link>
+          </a>
         </div>
       </div>
     </>

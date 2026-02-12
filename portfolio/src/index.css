@@ -53,7 +53,7 @@ body::-webkit-scrollbar {
   position: relative;
   min-height: 100vh;
   width: 100%;
-  overflow: hidden;
+  overflow-x: clip;
 }
 
 .hero_section::before,
@@ -69,7 +69,7 @@ body::-webkit-scrollbar {
   opacity: 0.5;
   z-index: 1;
   will-change: transform, opacity;
-  animation: floatSmooth 12s ease-in-out infinite;
+  animation: floatSmooth 8s ease-in-out infinite;
   transition: all 0.3s ease-in-out;
 }
 
@@ -82,13 +82,13 @@ body::-webkit-scrollbar {
 .hero_section::after {
   bottom: -250px;
   right: 50%;
-  animation-delay: 8s;
+  animation-delay: 4s;
 }
 
 .hero_blob {
   top: 30vh;
   right: 50px;
-  animation-delay: 4s;
+  animation-delay: 2s;
   background: radial-gradient(circle, #433bce 0%, #4f46e5 40%, #4a41f0 100%);
 }
 
@@ -470,6 +470,7 @@ body::-webkit-scrollbar {
 .project-card {
   position: relative;
   overflow: hidden;
+  z-index: 10;
 }
 
 .project-card::before {

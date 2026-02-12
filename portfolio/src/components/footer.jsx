@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Instagram, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -24,7 +24,7 @@ export default function Footer() {
             <ul className="space-y-2 text-secondary font-space">
               <li>
                 <a
-                  href="#home"
+                  href="#home_section"
                   className="hover:text-primary transition-colors duration-300"
                 >
                   Home
@@ -32,7 +32,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#projects"
+                  href="#project_section"
                   className="hover:text-primary transition-colors duration-300"
                 >
                   Projects
@@ -40,7 +40,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#tech-stack"
+                  href="#tech_stack_section"
                   className="hover:text-primary transition-colors duration-300"
                 >
                   Tech Stack
@@ -48,7 +48,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#experience"
+                  href="#experience_section"
                   className="hover:text-primary transition-colors duration-300"
                 >
                   Experience
@@ -62,34 +62,30 @@ export default function Footer() {
             <h3 className="text-lg font-bold font-space text-white">Connect</h3>
             <div className="flex gap-4">
               <a
-                href="https://github.com"
+                href="https://github.com/Aryan-Thapa-Np"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-white/5 backdrop-blur-md border border-white/10 rounded-lg hover:bg-white/10 hover:border-primary/50 transition-all duration-300 hover:scale-110"
               >
                 <Github size={20} className="text-white" />
               </a>
+
               <a
-                href="https://linkedin.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=aryanthapa583@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 bg-white/5 backdrop-blur-md border border-white/10 rounded-lg hover:bg-white/10 hover:border-primary/50 transition-all duration-300 hover:scale-110"
-              >
-                <Linkedin size={20} className="text-white" />
-              </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 bg-white/5 backdrop-blur-md border border-white/10 rounded-lg hover:bg-white/10 hover:border-primary/50 transition-all duration-300 hover:scale-110"
-              >
-                <Twitter size={20} className="text-white" />
-              </a>
-              <a
-                href="mailto:contact@example.com"
                 className="p-3 bg-white/5 backdrop-blur-md border border-white/10 rounded-lg hover:bg-white/10 hover:border-primary/50 transition-all duration-300 hover:scale-110"
               >
                 <Mail size={20} className="text-white" />
+              </a>
+
+              <a
+                href="https://www.instagram.com/aryanthapa224/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-3 bg-white/5 backdrop-blur-md border border-white/10 rounded-lg hover:bg-white/10 hover:border-primary/50 transition-all duration-300 hover:scale-110"
+              >
+                <Instagram size={20} className="text-white" />
               </a>
             </div>
           </div>

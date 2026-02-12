@@ -9,7 +9,6 @@ export default function Experience() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            console.log("Experience item entering viewport:", entry.target);
             entry.target.classList.add("animate-in");
           }
         });
@@ -21,7 +20,6 @@ export default function Experience() {
     );
 
     const items = sectionRef.current?.querySelectorAll(".experience-item");
-    console.log("Experience items found:", items?.length);
     items?.forEach((item) => observer.observe(item));
 
     return () => observer.disconnect();
@@ -29,52 +27,53 @@ export default function Experience() {
 
   const experiences = [
     {
-      title: "Senior Full-Stack Developer",
-      company: "Tech Innovations Inc.",
-      period: "2023 - Present",
+      title: "Full-Stack E-Commerce Development",
+      company: "Personal Project",
+      period: "2025 - 2025",
       description:
-        "Leading development of scalable web applications using React, Node.js, and MySQL. Architecting cloud-based solutions and mentoring junior developers.",
-      technologies: ["React", "Node.js", "MySQL", "AWS", "Docker"],
+        "Developed a comprehensive e-commerce platform featuring secure authentication, real-time chat support, and complex product management. Optimized MySQL queries for high performance and implemented a responsive UI with EJS templates.",
+      technologies: ["Node.js", "MySQL", "EJS", "JavaScript", "Express"],
     },
     {
-      title: "Full-Stack Developer",
-      company: "Digital Solutions Ltd.",
-      period: "2021 - 2023",
+      title: "Project Tracker & Management Tool",
+      company: "Personal Project",
+      period: "2025 - 2025",
       description:
-        "Developed and maintained multiple client projects, implementing responsive designs and RESTful APIs. Improved application performance by 40%.",
-      technologies: ["React", "Express.js", "MongoDB", "Tailwind CSS"],
+        "Developed a role-based project management platform that enables project managers to assign tasks to staff, track project progress, and manage subtasks efficiently. Implemented secure role-based access control (RBAC) to ensure proper permission handling across users. Designed a responsive frontend and built a scalable backend for structured project and task management.",
+      technologies: ["React", "Typescript", "Tailwind CSS", "Node.js", "MySQL"],
     },
     {
-      title: "Frontend Developer",
-      company: "Creative Web Studio",
-      period: "2019 - 2021",
+      title: "Birkhe - Social Media Auto Pilot",
+      company: "Developed Frontend and Web-Sockets Pipeline",
+      period: "In Progress",
       description:
-        "Created pixel-perfect, responsive user interfaces. Collaborated with designers and backend teams to deliver high-quality web applications.",
-      technologies: ["JavaScript", "React", "CSS3", "Figma"],
-    },
-    {
-      title: "Junior Developer",
-      company: "StartUp Ventures",
-      period: "2018 - 2019",
-      description:
-        "Assisted in building web applications and learned modern development practices. Contributed to both frontend and backend development.",
-      technologies: ["HTML", "CSS", "JavaScript", "Node.js"],
+        "Birkhe, the AI-powered SaaS platform that automates engagement, content creation, and customer interactions across Instagram, Facebook, and WhatsApp. Imagine AI handling your daily posts, replying to messages instantly, managing comments with smart sentiment analysis, and growing your audience while you focus on running your business.",
+      technologies: ["Node.js", "Lavarel", "Tailwind CSS", "MySQL", "React"],
     },
   ];
 
   return (
     <section
+      id="experience_section"
       ref={sectionRef}
       className="experience-section relative px-4 sm:px-8 md:px-12 lg:px-20 py-20 md:py-32"
     >
+      <div
+        className="hero_blob"
+        style={{ top: "50vh", right: "540px", zIndex: -10 }}
+      ></div>
+      <div
+        className="hero_blob"
+        style={{ top: "180vh", right: "140px", zIndex: -10 }}
+      ></div>
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16 experience-item">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-            Work <span className="text-primary">Experience</span>
+            Project <span className="text-primary">Experience</span>
           </h2>
           <p className="text-secondary text-lg md:text-xl font-space max-w-2xl mx-auto">
-            My professional journey in software development
+            A timeline of my key development milestones and personal projects
           </p>
         </div>
 
@@ -119,7 +118,7 @@ export default function Experience() {
                     </div>
 
                     {/* Description */}
-                    <p className="text-secondary font-space leading-relaxed mb-4">
+                    <p className="text-secondary font-space leading-relaxed mb-4 text-justify">
                       {exp.description}
                     </p>
 

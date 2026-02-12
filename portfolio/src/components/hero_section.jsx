@@ -1,10 +1,13 @@
-import user_image from "/user.jpeg";
+import user_image from "/user.jpg";
 import { ArrowRight, Phone } from "lucide-react";
 import StackIcon from "tech-stack-icons";
 
 export default function Hero_section() {
   return (
-    <section className="hero_section flex flex-col-reverse md:flex-row justify-between items-center gap-8 md:gap-12 px-4 sm:px-8 md:px-12 lg:px-20 pt-32 md:pt-16 lg:pt-20 pb-16 md:pb-20">
+    <section
+      id="home_section"
+      className="hero_section flex flex-col-reverse md:flex-row justify-between items-center gap-8 md:gap-12 px-4 sm:px-8 md:px-12 lg:px-20 pt-32 md:pt-16 lg:pt-20 pb-16 md:pb-20"
+    >
       <div className="hero_blob"></div>
 
       {/* Left Content */}
@@ -58,7 +61,7 @@ export default function Hero_section() {
           {/* Main glow container */}
           <div className="h-full w-full glow_eff bg-dark/50 flex items-center justify-center rounded-lg md:mr-8 lg:mr-12 xl:mr-20">
             <img
-              className="h-52 w-52 md:h-60 md:w-60 lg:h-68 lg:w-68 xl:h-76 xl:w-76 rounded-full border-4 sm:border-6 md:border-8 border-primary object-cover"
+              className="h-52 w-52 md:h-60 md:w-60 lg:h-68 lg:w-68 xl:h-76 xl:w-76 rounded-full border-4 sm:border-6 md:border-4 border-primary object-cover"
               src={user_image}
               alt="Profile"
             />

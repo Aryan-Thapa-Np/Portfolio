@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { Menu, X, Home, Briefcase, Code, Mail, Layers } from "lucide-react";
 
 export default function Sidebar() {
@@ -27,11 +26,11 @@ export default function Sidebar() {
   }, [isOpen]);
 
   const navItems = [
-    { name: "Home", path: "/", icon: Home },
-    { name: "Projects", path: "/projects", icon: Layers },
-    { name: "Tech Stack", path: "/stacks", icon: Code },
-    { name: "Experience", path: "/experience", icon: Briefcase },
-    { name: "Contact", path: "/contact", icon: Mail },
+    { name: "Home", path: "#home_section", icon: Home },
+    { name: "Projects", path: "#project_section", icon: Layers },
+    { name: "Tech Stack", path: "#tech_stack_section", icon: Code },
+    { name: "Experience", path: "#experience_section", icon: Briefcase },
+    { name: "Contact", path: "#contact_section", icon: Mail },
   ];
 
   return (
@@ -39,10 +38,10 @@ export default function Sidebar() {
       {/* Toggle Button - Visible on mobile */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed top-5 right-5 z-50 md:hidden bg-primary text-white p-3 rounded-lg shadow-lg hover:bg-primary/90 transition-all duration-300"
+        className="fixed top-2 right-5 z-50 flex items-center justify-center gap-2 md:hidden  btn_dark  bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 transition-colors"
         aria-label="Toggle menu"
       >
-        {isOpen ? <X size={24} /> : <Menu size={24} />}
+        {isOpen ? <X size={18} /> : <Menu size={18} />}
       </button>
 
       {/* Overlay */}
@@ -78,8 +77,8 @@ export default function Sidebar() {
                     className="sidebar-item"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <Link
-                      to={item.path}
+                    <a
+                      href={item.path}
                       onClick={() => setIsOpen(false)}
                       className="flex items-center gap-4 px-4 py-3 rounded-lg text-secondary hover:text-white hover:bg-white/5 transition-all duration-300 group"
                     >
@@ -90,7 +89,7 @@ export default function Sidebar() {
                       <span className="text-lg font-space font-medium">
                         {item.name}
                       </span>
-                    </Link>
+                    </a>
                   </li>
                 );
               })}
@@ -99,13 +98,13 @@ export default function Sidebar() {
 
           {/* CTA Button */}
           <div className="mt-8">
-            <Link
-              to="/contact"
+            <a
+              href="#contact_section"
               onClick={() => setIsOpen(false)}
-              className="btn w-full bg-primary text-white font-space font-semibold text-center block py-3"
+              className="btn w-full font-semibold flex items-center justify-center gap-2 btn_dark bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 transition-colors"
             >
               Hire Me
-            </Link>
+            </a>
           </div>
 
           {/* Footer */}

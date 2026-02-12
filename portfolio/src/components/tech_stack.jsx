@@ -9,7 +9,6 @@ export default function TechStack() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            console.log("Tech item entering viewport:", entry.target);
             entry.target.classList.add("animate-in");
           }
         });
@@ -21,7 +20,6 @@ export default function TechStack() {
     );
 
     const items = sectionRef.current?.querySelectorAll(".tech-item");
-    console.log("Tech items found:", items?.length);
     items?.forEach((item) => observer.observe(item));
 
     return () => observer.disconnect();
@@ -32,18 +30,17 @@ export default function TechStack() {
     { name: "nodejs", label: "Node.js" },
     { name: "mysql", label: "MySQL" },
     { name: "tailwindcss", label: "Tailwind CSS" },
-    { name: "javascript", label: "JavaScript" },
+    { name: "js", label: "JavaScript" },
     { name: "typescript", label: "TypeScript" },
     { name: "mongodb", label: "MongoDB" },
-    { name: "express", label: "Express.js" },
     { name: "git", label: "Git" },
-    { name: "github", label: "GitHub" },
-    { name: "figma", label: "Figma" },
-    { name: "vscode", label: "VS Code" },
+    { name: "html5", label: "HTML" },
+    { name: "css3", label: "CSS" },
   ];
 
   return (
     <section
+      id="tech_stack_section"
       ref={sectionRef}
       className="tech-stack-section relative px-4 sm:px-8 md:px-12 lg:px-20 py-20 md:py-32"
     >
@@ -59,7 +56,7 @@ export default function TechStack() {
         </div>
 
         {/* Tech Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8">
+        <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8">
           {techStack.map((tech, index) => (
             <div
               key={tech.name}
