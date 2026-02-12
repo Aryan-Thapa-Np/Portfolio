@@ -44,7 +44,7 @@ export default function Projects() {
         "Developed a role-based project management platform that enables project managers to assign tasks to staff, track project progress, and manage subtasks efficiently. Implemented secure role-based access control (RBAC) to ensure proper permission handling across users. Designed a responsive frontend and built a scalable backend for structured project and task management.",
       image: "/project2.jpg",
       technologies: ["React", "Typescript", "Tailwind CSS", "Node.js", "MySQL"],
-      github: "https://github.com/yourusername/task-manager",
+      github: "https://github.com/Aryan-Thapa-Np/Project-Tracker-React",
       demo: "#",
       has_demo: false,
       has_github: true,
@@ -55,7 +55,7 @@ export default function Projects() {
         "Birkhe, the AI-powered SaaS platform that automates engagement, content creation, and customer interactions across Instagram, Facebook, and WhatsApp. Imagine AI handling your daily posts, replying to messages instantly, managing comments with smart sentiment analysis, and growing your audience while you focus on running your business.",
       image: "/project3.jpg",
       technologies: ["Node.js", "Lavarel", "Tailwind CSS", "MySQL", "React"],
-      github: "https://github.com/yourusername/social-dashboard",
+      github: "https://github.com/Aryan-Thapa-Np",
       demo: "#",
       has_demo: false,
       has_github: true,
@@ -170,7 +170,7 @@ export default function Projects() {
             href="https://github.com/Aryan-Thapa-Np?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary to-purple-600 text-white rounded-lg hover:shadow-lg hover:shadow-primary/50 transition-all duration-300 font-space font-bold text-lg group"
+            className="inline-flex items-center  md:text-xl gap-3 px-8 py-4 bg-gradient-to-r from-primary to-purple-600 text-white rounded-lg hover:shadow-lg hover:shadow-primary/50 transition-all duration-300 font-space font-bold text-sm group"
           >
             <Github
               size={24}

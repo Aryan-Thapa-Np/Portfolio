@@ -45,12 +45,18 @@ export default function Hero_section() {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 pt-4 md:pt-6 lg:pt-10 font-space font-bold text-base sm:text-lg">
-            <button className="flex items-center justify-center gap-2 btn h-12 sm:h-14 w-full sm:w-48 md:w-56 bg-primary text-white hover:bg-primary/90 transition-colors">
+            <a
+              href="#project_section"
+              className="flex items-center justify-center gap-2 btn h-12 sm:h-14 w-full sm:w-48 md:w-56 bg-primary text-white hover:bg-primary/90 transition-colors"
+            >
               View Work <ArrowRight size={20} />
-            </button>
-            <button className="flex items-center justify-center gap-2 btn_dark h-12 sm:h-14 w-full sm:w-48 md:w-56 bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 transition-colors">
+            </a>
+            <a
+              href="#contact_section"
+              className="flex items-center justify-center gap-2 btn_dark h-12 sm:h-14 w-full sm:w-48 md:w-56 bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 transition-colors"
+            >
               Contact Me <Phone size={20} />
-            </button>
+            </a>
           </div>
         </div>
       </div>
