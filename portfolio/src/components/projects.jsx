@@ -3,6 +3,7 @@ import { Github, Hourglass, ExternalLink, Code2 } from "lucide-react";
 import homepage_ecommerce from "/homepage.png";
 import project_tracker from "/dashboard.png";
 import birkhe from "/birkhe.png";
+import freedom_bajaar from "/freedom bajaar.png";
 
 export default function Projects() {
   const sectionRef = useRef(null);
@@ -33,7 +34,7 @@ export default function Projects() {
       title: "E-Commerce Platform (Freedom Bajaar)",
       description:
         "A powerful, modern, and real-time e-commerce application built with Node.js, Express, MySQL, and EJS. This platform supports diverse purchasing options, including game top-ups, product subscriptions, and standard products, featuring a robust admin management system and real-time chat support.",
-      image: homepage_ecommerce,
+      image: freedom_bajaar,
       technologies: ["HTML", "CSS", "JavaScript", "Node.js", "ejs", "MySQL"],
       github:
         "https://github.com/Aryan-Thapa-Np/Ecommerce-Website--Node.js-EJS-HTML",
