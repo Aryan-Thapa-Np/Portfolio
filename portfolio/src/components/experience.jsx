@@ -44,11 +44,26 @@ export default function Experience() {
     },
     {
       title: "Birkhe - Social Media Auto Pilot",
-      company: "Developed Frontend and Web-Sockets Pipeline",
+      company: "Founder & Lead Developer (Collaborative Project)",
       period: "In Progress",
       description:
-        "Birkhe, the AI-powered SaaS platform that automates engagement, content creation, and customer interactions across Instagram, Facebook, and WhatsApp. Imagine AI handling your daily posts, replying to messages instantly, managing comments with smart sentiment analysis, and growing your audience while you focus on running your business.",
-      technologies: ["Node.js", "Lavarel", "Tailwind CSS", "MySQL", "React"],
+        "Co-developed an AI-driven SaaS platform that automates social media workflows. Architected the React frontend and engineered a high-performance Web-Socket pipeline to facilitate real-time messaging and automated sentiment-based interactions across Instagram, Facebook, and WhatsApp. Focused on creating a low-latency user experience for complex AI content management.",
+      technologies: [
+        "Node.js",
+        "Laravel",
+        "Tailwind CSS",
+        "MySQL",
+        "React",
+        "Web-Sockets",
+      ],
+    },
+    {
+      title: "Full-Stack E-Commerce Development",
+      company: "Personal Project",
+      period: "In Progress",
+      description:
+        "Developed a comprehensive e-commerce platform featuring secure authentication and complex product management. Optimized MySQL queries for high performance and implemented a responsive UI with EJS templates.",
+      technologies: ["Node.js", "MySQL", "EJS", "JavaScript", "Express"],
     },
   ];
 
@@ -104,7 +119,7 @@ export default function Experience() {
                   <div className="experience-card bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 md:p-8 hover:bg-white/10 hover:border-primary/50 transition-all duration-300 hover:scale-105">
                     {/* Header */}
                     <div className="mb-4">
-                      <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                      <h3 className="text-2xl md:text-3xl text-start font-bold text-white mb-2">
                         {exp.title}
                       </h3>
                       <div className="flex items-center gap-2 text-primary font-space text-lg mb-2">

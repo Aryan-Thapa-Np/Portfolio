@@ -1,5 +1,8 @@
 import { useEffect, useRef } from "react";
-import { Github, ExternalLink, Code2 } from "lucide-react";
+import { Github, Hourglass, ExternalLink, Code2 } from "lucide-react";
+import homepage_ecommerce from "/homepage.png";
+import project_tracker from "/dashboard.png";
+import birkhe from "/birkhe.png";
 
 export default function Projects() {
   const sectionRef = useRef(null);
@@ -27,35 +30,48 @@ export default function Projects() {
 
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "E-Commerce Platform (Freedom Bajaar)",
       description:
-        "A fully functional ecommerce platform built to support diverse purchasing options, including game top-ups, product subscriptions, and standard products. The website features a robust user management system, secure authentication, real-time chat support, and order tracking capabilities for an enhanced user experience.",
-      image: "/project1.jpg",
+        "A powerful, modern, and real-time e-commerce application built with Node.js, Express, MySQL, and EJS. This platform supports diverse purchasing options, including game top-ups, product subscriptions, and standard products, featuring a robust admin management system and real-time chat support.",
+      image: homepage_ecommerce,
       technologies: ["HTML", "CSS", "JavaScript", "Node.js", "ejs", "MySQL"],
       github:
         "https://github.com/Aryan-Thapa-Np/Ecommerce-Website--Node.js-EJS-HTML",
       demo: "#",
       has_demo: false,
-      has_github: true,
+      has_github: false,
     },
     {
       title: "Project Tracker & Management Tool",
       description:
-        "Developed a role-based project management platform that enables project managers to assign tasks to staff, track project progress, and manage subtasks efficiently. Implemented secure role-based access control (RBAC) to ensure proper permission handling across users. Designed a responsive frontend and built a scalable backend for structured project and task management.",
-      image: "/project2.jpg",
+        "A powerful, modern, and real-time project management application built with React 19, Node.js, Express, and MySQL. This application allows teams to efficiently track projects, manage tasks, and stay updated with real-time notifications.",
+      image: project_tracker,
       technologies: ["React", "Typescript", "Tailwind CSS", "Node.js", "MySQL"],
       github: "https://github.com/Aryan-Thapa-Np/Project-Tracker-React",
       demo: "#",
       has_demo: false,
       has_github: true,
     },
+
     {
       title: "Birkhe - Social Media Auto Pilot",
       description:
         "Birkhe, the AI-powered SaaS platform that automates engagement, content creation, and customer interactions across Instagram, Facebook, and WhatsApp. Imagine AI handling your daily posts, replying to messages instantly, managing comments with smart sentiment analysis, and growing your audience while you focus on running your business.",
-      image: "/project3.jpg",
+      image: birkhe,
       technologies: ["Node.js", "Lavarel", "Tailwind CSS", "MySQL", "React"],
-      github: "https://github.com/Aryan-Thapa-Np",
+      github: "#",
+      demo: "#",
+      has_demo: false,
+      has_github: false,
+    },
+    {
+      title: "E-Commerce Platform (Cartify)",
+      description:
+        "A powerful, modern, and real-time e-commerce application built with Node.js, Express, MySQL, and EJS. This platform supports diverse purchasing options, including game top-ups, product subscriptions, and standard products, featuring a robust admin management system and real-time chat support.",
+      image: homepage_ecommerce,
+      technologies: ["HTML", "CSS", "JavaScript", "Node.js", "ejs", "MySQL"],
+      github:
+        "https://github.com/Aryan-Thapa-Np/Ecommerce-Website--Node.js-EJS-HTML",
       demo: "#",
       has_demo: false,
       has_github: true,
@@ -91,21 +107,21 @@ export default function Projects() {
               className="project-item project-card group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="relative h-full bg-white/5 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden hover:bg-white/10 hover:border-primary/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/20">
+              <div className="relative  h-full bg-white/5 backdrop-blur-md border border-white/10 rounded-xl overflow-hidden hover:bg-white/10 hover:border-primary/50 transition-all duration-300  hover:shadow-2xl hover:shadow-primary/20">
                 {/* Project Image */}
-                <div className="relative h-48 md:h-56 bg-gradient-to-br from-primary/20 to-purple-600/20 overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Code2 size={64} className="text-white/20" />
-                  </div>
-                  {/* Overlay on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
-                </div>
+                {project.image && (
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-48 md:h-56 object-contain"
+                  />
+                )}
 
                 {/* Project Content */}
                 <div className="p-6 space-y-4">
                   {/* Title and Stars */}
-                  <div className="flex items-start justify-between gap-2">
-                    <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-primary transition-colors duration-300">
+                  <div className="flex items-start justify-between gap-2 ">
+                    <h3 className="text-xl md:text-2xl font-bold  text-white group-hover:text-primary transition-colors duration-300">
                       {project.title}
                     </h3>
                   </div>
@@ -155,6 +171,19 @@ export default function Projects() {
                           className="group-hover/btn:scale-110 transition-transform duration-300"
                         />
                         Demo
+                      </a>
+                    )}
+
+                    {!project.has_demo && !project.has_github && (
+                      <a
+                        rel="noopener noreferrer"
+                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 hover:border-primary/50 transition-all duration-300 text-white font-space text-sm font-medium group/btn"
+                      >
+                        <Hourglass
+                          size={16}
+                          className="group-hover/btn:scale-110 transition-transform duration-300"
+                        />
+                        In Development
                       </a>
                     )}
                   </div>
