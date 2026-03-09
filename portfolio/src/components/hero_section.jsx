@@ -18,15 +18,15 @@ export default function Hero_section() {
             <span className="text-light">Full-Stack</span> <br />
             <span className="text-primary">Developer &</span>
             <br className="hidden sm:block" />
-            <span className="sm:inline"> System Designer</span>
+            <span className="sm:inline"> Software Engineer</span>
           </h1>
 
           <p className="text-secondary text-sm sm:text-base md:text-lg lg:text-xl font-space leading-relaxed w-full sm:w-[85%] md:w-[75%] lg:w-[65%] xl:w-[50%]">
             <span className="underline underline-offset-4 text-white decoration-primary/50">
               Hi! I'm Aryan Thapa
             </span>
-            , a Full-Stack Developer & System Designer. I build web applications
-            that work smoothly and look great. Experienced with{" "}
+            , a Full-Stack Developer & Software Engineer. I build web
+            applications that work smoothly and look great. Experienced with{" "}
             <span className="underline underline-offset-4 text-white decoration-primary/50">
               React
             </span>

@@ -11,7 +11,9 @@ import { useForm, ValidationError } from "@formspree/react";
 
 export default function Contact() {
   const sectionRef = useRef(null);
-  const [state, handleSubmit] = useForm(import.meta.env.VITE_FORMSPREE_KEY);
+  const [state, handleSubmit] = useForm(
+    import.meta.env.VITE_FORMSPREE_KEY || "dummy",
+  );
 
   useEffect(() => {
     const observer = new IntersectionObserver(

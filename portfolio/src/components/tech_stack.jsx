@@ -26,16 +26,20 @@ export default function TechStack() {
   }, []);
 
   const techStack = [
-    { name: "react", label: "React" },
-    { name: "nodejs", label: "Node.js" },
-    { name: "mysql", label: "MySQL" },
-    { name: "tailwindcss", label: "Tailwind CSS" },
-    { name: "js", label: "JavaScript" },
-    { name: "typescript", label: "TypeScript" },
-    { name: "mongodb", label: "MongoDB" },
-    { name: "git", label: "Git" },
-    { name: "html5", label: "HTML" },
-    { name: "css3", label: "CSS" },
+    { name: "react", label: "React", proficiency: "Intermediate" },
+    { name: "nodejs", label: "Node.js", proficiency: "Intermediate" },
+    { name: "mysql", label: "MySQL", proficiency: "Intermediate" },
+    { name: "tailwindcss", label: "Tailwind CSS", proficiency: "Intermediate" },
+    { name: "js", label: "JavaScript", proficiency: "Intermediate" },
+    { name: "typescript", label: "TypeScript", proficiency: "Beginner" },
+    { name: "mongodb", label: "MongoDB", proficiency: "Intermediate" },
+    { name: "git", label: "Git", proficiency: "Beginner" },
+    { name: "html5", label: "HTML", proficiency: "Intermediate" },
+    { name: "css3", label: "CSS", proficiency: "Intermediate" },
+    { name: "java", label: "Java", proficiency: "Beginner" },
+    { name: "python", label: "Python", proficiency: "Beginner" },
+    { name: "spring", label: "Spring Boot", proficiency: "Beginner" },
+    { name: "redis", label: "Redis", proficiency: "Intermediate" },
   ];
 
   return (
@@ -67,9 +71,14 @@ export default function TechStack() {
                 <div className="text-5xl md:text-6xl transition-transform duration-300 group-hover:scale-110">
                   <StackIcon name={tech.name} />
                 </div>
-                <span className="text-white font-space text-sm md:text-base font-medium">
-                  {tech.label}
-                </span>
+                <div className="flex flex-col items-center gap-1.5 text-center">
+                  <span className="text-white font-space text-sm md:text-base font-medium">
+                    {tech.label}
+                  </span>
+                  <span className={`text-[10px] md:text-xs font-space px-2 py-0.5 rounded-full border ${tech.proficiency === 'Beginner' ? 'bg-primary/10 text-primary border-primary/20' : 'bg-white/5 text-white/60 border-white/10'}`}>
+                    {tech.proficiency}
+                  </span>
+                </div>
               </div>
             </div>
           ))}
