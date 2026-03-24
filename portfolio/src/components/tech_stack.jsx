@@ -32,14 +32,14 @@ export default function TechStack() {
     { name: "tailwindcss", label: "Tailwind CSS", proficiency: "Intermediate" },
     { name: "js", label: "JavaScript", proficiency: "Intermediate" },
     { name: "typescript", label: "TypeScript", proficiency: "Beginner" },
-    { name: "mongodb", label: "MongoDB", proficiency: "Intermediate" },
+    { name: "mongodb", label: "MongoDB", proficiency: "Beginner" },
     { name: "git", label: "Git", proficiency: "Beginner" },
     { name: "html5", label: "HTML", proficiency: "Intermediate" },
     { name: "css3", label: "CSS", proficiency: "Intermediate" },
     { name: "java", label: "Java", proficiency: "Beginner" },
     { name: "python", label: "Python", proficiency: "Beginner" },
-    { name: "spring", label: "Spring Boot", proficiency: "Beginner" },
-    { name: "redis", label: "Redis", proficiency: "Intermediate" },
+    { name: "java", label: "Servlet", proficiency: "Beginner" },
+    { name: "redis", label: "Redis", proficiency: "Beginner" },
   ];
 
   return (

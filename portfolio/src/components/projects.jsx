@@ -4,6 +4,8 @@ import homepage_ecommerce from "/homepage.png";
 import project_tracker from "/dashboard.png";
 import birkhe from "/birkhe.png";
 import freedom_bajaar from "/freedom bajaar.png";
+import affilaite_nepal from "/affilaite-nepal.png";
+import samrat from "/samrat.png";
 
 export default function Projects() {
   const sectionRef = useRef(null);
@@ -61,9 +63,10 @@ export default function Projects() {
       image: birkhe,
       technologies: ["Node.js", "Lavarel", "Tailwind CSS", "MySQL", "React"],
       github: "#",
-      demo: "#",
-      has_demo: false,
+      demo: "https://birkhe.up.railway.app",
+      has_demo: true,
       has_github: false,
+      in_development: true,
     },
     {
       title: "E-Commerce Platform (Cartify)",
@@ -76,6 +79,29 @@ export default function Projects() {
       demo: "#",
       has_demo: false,
       has_github: true,
+    },
+    {
+      title: "Affiliate Marketing Nepal",
+      description:
+        "A centralized platform for affiliate users to manage their work efficiently. This platform allows affiliates to showcase their professional profiles, display their products to customers, track performance, and manage their affiliate network all in one place.",
+      image: affilaite_nepal,
+      technologies: ["React", "Node.js", "MySQL", "Tailwind CSS", "JavaScript"],
+      github: "#",
+      demo: "#",
+      has_demo: false,
+      has_github: false,
+    },
+    {
+      title: "Samrat - AI Image Generator",
+      description:
+        "A cutting-edge image generation application powered by AI. Users can generate unique, high-quality images by providing text prompts. Samrat features advanced AI capabilities, batch processing, and customizable parameters for fine-tuning generated outputs to meet specific creative needs.",
+      image: samrat,
+      technologies: ["React", "AI/ML", "Node.js", "Tailwind CSS", "MongoDB", "Redis"],
+      github: "#",
+      demo: "https://samrat.digital",
+      has_demo: true,
+      has_github: false,
+      in_development: true,
     },
   ];
 
@@ -175,7 +201,20 @@ export default function Projects() {
                       </a>
                     )}
 
-                    {!project.has_demo && !project.has_github && (
+                    {project.in_development && (
+                      <a
+                        rel="noopener noreferrer"
+                        className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 hover:border-primary/50 transition-all duration-300 text-white font-space text-sm font-medium group/btn"
+                      >
+                        <Hourglass
+                          size={16}
+                          className="group-hover/btn:scale-110 transition-transform duration-300"
+                        />
+                        In Development
+                      </a>
+                    )}
+
+                    {!project.has_demo && !project.has_github && !project.in_development && (
                       <a
                         rel="noopener noreferrer"
                         className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-lg hover:bg-white/10 hover:border-primary/50 transition-all duration-300 text-white font-space text-sm font-medium group/btn"
