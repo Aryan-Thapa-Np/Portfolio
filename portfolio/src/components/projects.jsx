@@ -5,7 +5,7 @@ import project_tracker from "/dashboard.png";
 import birkhe from "/birkhe.png";
 import freedom_bajaar from "/freedom bajaar.png";
 import affilaite_nepal from "/affilaite-nepal.png";
-import samrat from "/samrat.png";
+
 
 export default function Projects() {
   const sectionRef = useRef(null);
@@ -91,18 +91,7 @@ export default function Projects() {
       has_demo: false,
       has_github: false,
     },
-    {
-      title: "Samrat - AI Image Generator",
-      description:
-        "A cutting-edge image generation application powered by AI. Users can generate unique, high-quality images by providing text prompts. Samrat features advanced AI capabilities, batch processing, and customizable parameters for fine-tuning generated outputs to meet specific creative needs.",
-      image: samrat,
-      technologies: ["React", "AI/ML", "Node.js", "Tailwind CSS", "MongoDB", "Redis"],
-      github: "#",
-      demo: "https://samrat.digital",
-      has_demo: true,
-      has_github: false,
-      in_development: true,
-    },
+
   ];
 
   return (

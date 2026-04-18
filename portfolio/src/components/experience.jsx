@@ -73,14 +73,7 @@ export default function Experience() {
         "Building a centralized affiliate marketing platform designed specifically for the Nepali market. The platform enables affiliates to manage their work efficiently, showcase professional profiles, display products to customers, track performance metrics, and manage their affiliate network all in one place. Implementing real-time analytics and commission tracking features.",
       technologies: ["React", "Node.js", "MySQL", "Tailwind CSS", "JavaScript"],
     },
-    {
-      title: "Samrat - AI Image Generator",
-      company: "Personal Project",
-      period: "In Progress",
-      description:
-        "Developing a cutting-edge AI-powered image generation application that allows users to generate unique, high-quality images from text prompts. Samrat features advanced AI capabilities, batch processing, real-time caching with Redis, and customizable parameters for fine-tuning generated outputs to meet specific creative needs.",
-      technologies: ["React", "Node.js", "Tailwind CSS", "MongoDB", "Redis", "AI/ML"],
-    },
+
   ];
 
   return (

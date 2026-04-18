@@ -21,10 +21,11 @@ export default function Header() {
 
         <div className="right md:flex hidden ">
           <a
-            href="#contact_section"
+            href="/Aryan Thapa CV.pdf"
+            download
             className="btn font-semibold flex items-center justify-center gap-2 btn_dark bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 transition-colors "
           >
-            Hire Me
+            Download CV
           </a>
         </div>
       </div>

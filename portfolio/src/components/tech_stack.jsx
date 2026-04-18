@@ -63,7 +63,7 @@ export default function TechStack() {
         <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-8">
           {techStack.map((tech, index) => (
             <div
-              key={tech.name}
+              key={index}
               className="tech-item tech-card group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >

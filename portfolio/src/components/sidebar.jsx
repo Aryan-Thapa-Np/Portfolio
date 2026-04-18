@@ -99,11 +99,12 @@ export default function Sidebar() {
           {/* CTA Button */}
           <div className="mt-8">
             <a
-              href="#contact_section"
+              href="/Aryan Thapa CV.pdf"
+              download
               onClick={() => setIsOpen(false)}
               className="btn w-full font-semibold flex items-center justify-center gap-2 btn_dark bg-white/5 backdrop-blur-md border border-white/10 hover:bg-white/10 transition-colors"
             >
-              Hire Me
+              Download CV
             </a>
           </div>
 
